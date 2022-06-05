@@ -1,0 +1,163 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+a{
+	text-decoration: none;
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+/* layout */
+body{
+	font-family:sans-serif;
+}
+.wrap{
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.logo a{
+	display: block;
+	background: url(../images/logo_w@svg.svg) no-repeat; 
+	width: 120px;
+	height: 24px;
+	text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu{
+	display: flex;
+}
+
+.menu li a{
+	padding: 13px;
+	color: #fff;
+}
+
+.menu li a:hover{
+	background:red;
+}
+
+.banner{
+	background: url(../images/header_desktop.png) no-repeat center ;
+	height: 420px;
+}
+
+.slogan{
+	width: 50%;
+	background: rgba(0,0,0,0.35);
+	color: #fff;
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 80px;
+}
+
+.slogan h2{
+	font-size: 36px;
+	margin: 20px 0;
+}
+
+.slogan p{
+	margin-bottom: 5px;
+}
+
+/* footer */
+footer{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	background-image: linear-gradient(to right, #d7d8c7, #e0e2ce, #e9ebd6, #f3f5dd, #fcffe5);
+	color: #3D1101;
+	line-height: 1.2;
+}
+footer h2{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.about,.contact{
+	width: 40%;
+}
+
+.social-items,.footer-logo{
+	float: right;
+	margin: 5px 0;
+}
+
+.fab{
+	margin: 0 5px;
+}
+
+.fa-google-plus-square{
+	color: rgb(234, 107, 33);
+}
+
+.fa-twitter-square{
+	color: rgb(62, 187, 255);
+}
+
+.fa-facebook-square{
+	color: rgb(26, 55, 184);
+}
+
+
+
+
+
+
