@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" href="images/hamburger_patty_icon.ico">
+    <link rel="shortcut icon" href="images/hamburger_patty_icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="六角西餐廳,響應式排版練習">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="六角西餐廳" />
+    <meta property="og:description" content="六角西餐廳,響應式排版練習" />
+    <meta property="og:image" content="六角西餐廳" />
+    <meta property="og:url" content="site_url" />
+    <meta property="og:site_name" content="六角西餐廳" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/pure.css">
+    <link rel="stylesheet" href="css/pure-custom.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>餐點 - 六角西餐廳</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <a href="#">
+            <img class="go-top" src="images/gotop.png" alt="gotop" />
+        </a>
+        <header>
+            <div class="banner">
+                <div class="navbar">
+                    <h1 class="logo"><a href="index.html">六角西餐廳</a></h1>
+                    <ul class="menu">
+                        <li><a href="#tip-archor">特色</a></li>
+                        <li><a href="#chef-archor">主廚</a></li>
+                        <li><a href="#map-archor">地圖</a></li>
+                        <li><a href="cart.html">菜單</a></li>
+                        <li><a href="login.html">登入</a></li>
+                        <li><a href="register.html">註冊</a></li>
+                    </ul>
+                    <svg class="ham hamRotate" viewBox="0 0 100 100" width="50">
+                        <path class="line top"
+                            d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20">
+                        </path>
+                        <path class="line middle" d="m 70,50 h -40"></path>
+                        <path class="line bottom"
+                            d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20">
+                        </path>
+                    </svg>
+                </div>
+                <div class="slogan">
+                    <h2>咬一口就無法忘懷的漢堡</h2>
+                    <p>七夕絕對無法錯過的好滋味</p>
+                    <i class="fas fa-utensils"></i>
+                    <span>六角大漢堡</span>
+                    <i class="fas fa-utensils"></i>
+                </div>
+            </div>
+        </header>
+        <main class="main-bg cart-page">
+            <div class="sidebar">
+                <h2><i class="fa-solid fa-burger"></i>線上訂購美食</h2>
+                <ul class="list">
+                    <li><a href="#">全部 (23)</a></li>
+                    <li><a href="#">只愛吃薯條 (18)</a></li>
+                    <li><a href="#">加熱就可食 (1)</a></li>
+                    <li><a href="#">不敗漢堡系列 (4)</a></li>
+                </ul>
+            </div>
+            <div class="cart-contents">
+                <div class="search">
+                    <input class="search-bar" type="text" name="search" id="search" placeholder="輸入名稱">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="shop-cart">
+                    <p>結帳去</p>
+                    <div class="cart-icon">
+                        <i class="fa-solid fa-2x fa-cart-shopping"></i>
+                        <div class="amount">1</div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="cart-items">
+                    <div class="product">
+                        <div class="product-img product-1">
+                            <i class="fa-regular fa-2x fa-heart"></i>
+                        </div>
+                        <div class="product-content">
+                            <div class="food-name">
+                                <h3>經典漢堡套餐</h3>
+                                <p>Classic Hamburger Package</p>
+                            </div>
+                            <div class="underline"></div>
+                            <p class="price">$120 </p>
+                            <button class="pure-button cart-btn">
+                                <i class="fa-solid  fa-cart-shopping"></i>
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img product-2">
+                            <i class="fa-regular fa-2x fa-heart"></i>
+                        </div>
+                        <div class="product-content">
+                            <div class="food-name">
+                                <h3>英俊香腸</h3>
+                                <p>Handsome Sausage</p>
+                            </div>
+                            <div class="underline"></div>
+                            <p class="price">$1,024</p>
+                            <button class="pure-button cart-btn">
+                                <i class="fa-solid  fa-cart-shopping"></i>
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img product-3">
+                            <i class="fa-regular fa-2x fa-heart"></i>
+                        </div>
+                        <div class="product-content">
+                            <div class="food-name">
+                                <h3>漢堡兄弟</h3>
+                                <p>Hamburg Brothers</p>
+                            </div>
+                            <div class="underline"></div>
+                            <p class="price">$792 </p>
+                            <button class="pure-button cart-btn">
+                                <i class="fa-solid  fa-cart-shopping"></i>
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img product-4">
+                            <i class="fa-regular fa-2x fa-heart"></i>
+                        </div>
+                        <div class="product-content">
+                            <div class="food-name">
+                                <h3>完美願望</h3>
+                                <p>Dragon Ball Package</p>
+                            </div>
+                            <div class="underline"></div>
+                            <p class="price">$999,999</p>
+                            <button class="pure-button cart-btn">
+                                <i class="fa-solid  fa-cart-shopping"></i>
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <div class="about">
+                <h2>關於 六角西餐廳</h2>
+                <p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim,
+                    pulvinar lobortis nibh lacinia at. </p>
+            </div>
+            <div class="contact">
+                <h2>聯絡方式</h2>
+                <ul>
+                    <li>高雄市中正五路到底</li>
+                    <li><a href="tel:+886 886 886">+886 886 886</a></li>
+                    <li><a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <img class="footer-logo" src="images/logo_l@svg.svg" alt="logo_l">
+                <div class="social-items">
+                    <a href="#"><i class="social-icon fab fa-2x fa-google-plus-square"></i></a>
+                    <a href="#"><i class="social-icon fab fa-2x fa-twitter-square"></i></a>
+                    <a href="#"><i class="social-icon fab fa-2x fa-facebook-square"></i></a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+    </div>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
