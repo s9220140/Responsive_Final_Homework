@@ -16,11 +16,12 @@ body {
     width: 52px;
 }
 
+.clearfix {
+	clear: both;
+}
+
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
+	@include navbar-layout;
 }
 
 .logo a {
@@ -28,26 +29,22 @@ body {
 	background: url(/images/logo_w@svg.svg) no-repeat;
 	width: 120px;
 	height: 24px;
-	text-indent: 101%;
-	white-space: nowrap;
-	overflow: hidden;
+	@include hide-text;
 }
 
 .menu {
     display: flex;
-    li a {
-        padding: 13px;
-        color: #fff;
-        display: block;
-    }
-
-    li a:hover {
-        background: red;
+    li {
+        a {
+            padding: 18px 12px;
+            color: #fff;
+            display: block;
+        }
+        a:hover {
+            background: red;
+        }
     }
 }
-
-
-
 
 
 @media (max-width:768px) {
@@ -96,30 +93,17 @@ body {
 
 @media (max-width:767px) {
 	.menu {
-		width: 90%;
-		margin: 0 auto;
-		display: block;
-		/* 隱藏選單 */
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 1s;
-		/* 固定在網頁上 */
-		position: absolute;
-		z-index: 100;
-		top: 95px;
-		left: 0;
-		right: 0;
-	}
-	.menu li {
-		text-align: center;
-		background: #4c1805;
-		border-bottom: 1px solid #FF5E45;
+		@include hide-menu;
+		li {
+			text-align: center;
+			background: #4c1805;
+			border-bottom: 1px solid #FF5E45;
+			a {
+				padding: 1rem;
+			}
+		}
 	}
 
-	.menu li a {
-		font-size: 20px;
-		padding: 1rem;
-	}
 
 	.ham {
 		display: block;
@@ -132,8 +116,8 @@ body {
 }
 
 .banner {
-	background: url(/images/header_desktop.png) no-repeat center;
-	height: 420px;
+	background: url(../images/header_desktop.png) no-repeat center;
+	min-height: 420px;
 }
 
 .slogan {
@@ -154,16 +138,15 @@ body {
 }
  
 @media (max-width:768px) {
-	.slogan p,
-	.slogan span {
-		font-size: 20px;
+	
+	.slogan{
+		font-size: 22px;
 	}
-
 }
 
 @media (max-width:767px){
 	.banner{
-		background: url(/images/header_mobile.png) center / cover;
+		background: url(../images/header_mobile.png) center / cover;
 	}
 }
 

@@ -1,0 +1,298 @@
+/* cart.html */
+.cart-page {
+    color: #3D1101;
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+
+.fa-burger {
+    margin-right: 8px;
+}
+
+.list {
+    margin: 10px 0;
+
+    li {
+        border-bottom: 1px solid #3D1101;
+
+        a {
+            color: #3D1101;
+            display: block;
+            padding: 8px;
+        }
+
+        a:hover {
+            background: #3D1101;
+            color: #fff;
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .list li a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:767px) {
+    .cart-page {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .list {
+        width: 95%;
+        margin: 1.2rem auto;
+
+        li {
+            a {
+                font-size: 24px;
+                text-align: center;
+                padding: 12px 0;
+            }
+        }
+    }
+}
+
+.cart-contents {
+    width: 100%;
+    margin-left: 1%;
+}
+
+.search {
+    position: relative;
+    margin-right: 16px;
+    float: left;
+}
+
+.search-bar {
+    border: 2px solid #3D1101;
+    background: #EFE9E7;
+    height: 35px;
+    width: 400px;
+    outline: none;
+    font-size: 18px;
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #3D1101;
+    outline: none;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+
+    i {
+        color: #fff;
+    }
+}
+
+
+
+@media (max-width:767px) {
+    .search-bar {
+        height: 45px;
+    }
+
+    .search-btn {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+
+
+.shop-cart {
+    float: left;
+
+    p {
+        padding-right: 10px;
+        margin-top: 8px;
+        float: left;
+    }
+
+    p::after {
+        content: '|';
+        margin-left: 12px;
+    }
+
+    i {
+        margin-left: 12px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    i:hover {
+        color: red;
+    }
+
+    .cart-icon {
+        float: left;
+    }
+}
+
+
+
+@media (max-width:767px) {
+    .shop-cart {
+        float: right;
+        margin: 1rem 0;
+        i {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.amount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FF5E45;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+@media (max-width:767px) {
+    .search {
+        float: none;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
+
+.product {
+    font-size: 20px;
+    color: #3D1101;
+    width: 31.333%;
+    margin: 0 1%;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 10px;
+}
+
+
+
+.fa-heart {
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+}
+
+.product-content {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width:768px) {
+    .product-content {
+        font-size: 18px;
+    }
+}
+
+.food-name {
+    height: 50px;
+}
+
+.cart-btn {
+    border: 2px solid #FF5E45;
+    border-radius: 3px;
+    color: #F56C23;
+    background: #EFE9E7;
+    width: 90%;
+    padding: 5px;
+}
+
+.cart-btn:hover {
+    border: 2px solid transparent;
+    color: #fff;
+    background: #F56C23;
+}
+
+
+
+.product-1 {
+    background: url(../images/product_1.png);
+}
+
+.product-2 {
+    background: url(../images/product_2.png);
+}
+
+.product-3 {
+    background: url(../images/product_3.png);
+}
+
+.product-4 {
+    background: url(../images/product_4.png);
+}
+
+.product-img {
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.underline {
+    border-bottom: 1px solid #3D1101;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    width: 50%;
+}
+
+.price {
+    margin-bottom: 10px;
+    color: red;
+}
+
+@media (max-width:768px) and (min-width:568px) {
+    .product {
+        width: 48%;
+    }
+}
+
+@media (max-width:567px) {
+    .product {
+        width: 90%;
+        margin-bottom: 16px;
+    }
+}

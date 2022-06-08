@@ -1,0 +1,46 @@
+@mixin navbar-layout {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+	// padding: 10px;
+}
+
+// 隱藏文字，h1常用
+@mixin hide-text {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// PC以下尺寸隱藏選單(搭配漢堡選單)
+@mixin hide-menu {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    /* 隱藏選單 */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    /* 固定在網頁上 */
+    position: absolute;
+    z-index: 100;
+    top: 95px;
+    left: 0;
+    right: 0;
+}
+
+// flex垂直對齊
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// 背景圖設定
+@mixin bg-img-setting {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

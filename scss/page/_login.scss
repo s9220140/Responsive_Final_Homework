@@ -1,0 +1,63 @@
+/* login.html */
+.login-title {
+	text-align: center;
+}
+
+.login-title p {
+	margin: 10px 0;
+}
+
+.login-form {
+	box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.16);
+	max-width: 300px;
+	margin: 20px auto;
+	border-top: 3px solid #F56C23;
+	padding: 8px;
+}
+
+.input-icon {
+	position: relative;
+    i {
+        position: absolute;
+        padding: 15px;
+        color: #3D1101;
+        opacity: 0.5;
+    }
+}
+
+.form-link {
+	display: block;
+	color: #F56C23;
+	margin-top: 10px;
+}
+@media (max-width:768px){
+	.form-link {
+		font-size: 20px;
+	}
+}
+
+.login-text {
+	color: #3D1101;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.main-bg {
+	background: #EFE9E7;
+	padding: 20px;
+}
+
+.login-form-btn {
+	width: 48%;
+}
+
+.btn-group {
+	margin-top: 1.5rem;
+}
+
+@media (max-width:768px){
+	.login-form{
+		max-width: 90%;
+	}
+}
