@@ -1,44 +1,36 @@
 /* register */
 .sign-form {
-	box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.16);
-	max-width: 620px;
-	margin: 20px auto;
-	border-top: 3px solid #F56C23;
-	padding: 8px;
+    box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.16);
+    max-width: 620px;
+    margin: 20px auto;
+    border-top: 3px solid $color-2;
+    padding: 8px;
 }
 
 .manual,
 .sign {
-	float: left;
-	width: 48%;
-	margin: 0 1%;
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+
+    @include pad {
+        float: none;
+        width: 100%;
+        margin: 2%;
+    }
 }
 
 .sign-form input,
 .login-form input {
-	text-indent: 1.5rem;
+    text-indent: 1.5rem;
 }
 
 .manual {
-	line-height: 1.2;
+    line-height: 1.2;
 }
 
-.pure-button.send-button.btn-float-right {
-	float: right;
-	margin-right: 0.5em;
-	font-size: 20px;
-}
-
-@media (max-width:768px){
-	.sign-form{
-		max-width: 90%;
-	}
-	.manual p{
-		font-size: 20px;
-	}
-	.manual, .sign {
-		float: none;
-		width: 100%;
-		margin: 2%;
-	}
+.pure-button.send-btn.btn-float-right {
+    float: right;
+    margin-right: 0.5em;
+    font-size: 20px;
 }

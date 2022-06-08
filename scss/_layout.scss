@@ -1,11 +1,11 @@
 /* layout */
 body {
-	font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 .wrap {
-	max-width: 1024px;
-	margin: 0 auto;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .go-top {
@@ -17,214 +17,218 @@ body {
 }
 
 .clearfix {
-	clear: both;
+    clear: both;
 }
 
+// header
 .navbar {
-	@include navbar-layout;
+    @include navbar-layout;
 }
 
 .logo a {
-	display: block;
-	background: url(/images/logo_w@svg.svg) no-repeat;
-	width: 120px;
-	height: 24px;
-	@include hide-text;
+    display: block;
+    background: url(/images/logo_w@svg.svg) no-repeat;
+    width: 120px;
+    height: 24px;
+    @include hide-text;
 }
 
 .menu {
     display: flex;
+
+    @include iphone {
+        @include hide-menu;
+    }
+
     li {
+        @include iphone {
+            text-align: center;
+            background: #4c1805;
+            border-bottom: 1px solid #FF5E45;
+        }
+
         a {
             padding: 18px 12px;
             color: #fff;
             display: block;
+
+            @include pad {
+                font-size: 20px;
+            }
         }
+
         a:hover {
             background: red;
         }
     }
 }
 
-
-@media (max-width:768px) {
-	.menu li a {
-		font-size: 20px;
-	}
+/*jQ點擊後動態在 body 加上 class */
+@include iphone {
+    .menu-show .menu {
+        max-height: 500px
+    }
 }
+
 
 /* 在PC隱藏漢堡選單 */
 .ham {
-	display: none;
+    display: none;
     cursor: pointer;
-	transition: transform 400ms;
-	user-select: none;
+    transition: transform 400ms;
+    user-select: none;
+
     .top {
         stroke-dasharray: 40 121;
     }
+
     .bottom {
         stroke-dasharray: 40 121;
     }
+
+    @include iphone {
+        display: block;
+    }
 }
 
-.ham.active .top {
-	stroke-dashoffset: -68px;
+.ham.active {
+    .top {
+        stroke-dashoffset: -68px;
+    }
+
+    .bottom {
+        stroke-dashoffset: -68px;
+    }
 }
 
-.ham.active .bottom {
-	stroke-dashoffset: -68px;
-}
 
 .hamRotate.active {
-	transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .hamRotate180.active {
-	transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .line {
-	fill: none;
-	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-	stroke: #fff;
-	stroke-width: 5.5;
-	stroke-linecap: round;
-}
-
-@media (max-width:767px) {
-	.menu {
-		@include hide-menu;
-		li {
-			text-align: center;
-			background: #4c1805;
-			border-bottom: 1px solid #FF5E45;
-			a {
-				padding: 1rem;
-			}
-		}
-	}
-
-
-	.ham {
-		display: block;
-	}
-
-	/*jQ點擊後動態在 body 加上 class */
-	.menu-show .menu {
-		max-height: 500px
-	}
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
 }
 
 .banner {
-	background: url(../images/header_desktop.png) no-repeat center;
-	min-height: 420px;
+    background: url(../images/header_desktop.png) no-repeat center;
+    min-height: 420px;
+
+    @include iphone {
+        background: url(../images/header_mobile.png) center / cover;
+    }
 }
 
 .slogan {
-	width: 90%;
-	background: rgba(0, 0, 0, 0.35);
-	color: #fff;
-	padding: 10px;
-	margin: 0 auto;
-	text-align: center;
-	margin-top: 80px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 80px;
+
     h2 {
         font-size: 36px;
         margin: 20px 0;
     }
+
     p {
         margin-bottom: 8px;
     }
-}
- 
-@media (max-width:768px) {
-	
-	.slogan{
-		font-size: 22px;
-	}
-}
 
-@media (max-width:767px){
-	.banner{
-		background: url(../images/header_mobile.png) center / cover;
-	}
+    @include pad {
+        font-size: 22px;
+    }
 }
-
 
 /* footer */
 footer {
-	display: flex;
-	align-items: center;
-	padding: 20px;
-	background-image: linear-gradient(to right, #d7d8c7, #e0e2ce, #e9ebd6, #f3f5dd, #fcffe5);
-	color: #3D1101;
-	line-height: 1.2;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-image: $bg-color-2;
+    color: $color-1;
+    line-height: 1.2;
+
     h2 {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 8px;
     }
+
+    @include iphone {
+        display: block;
+    }
 }
 
-.about,
+.about {
+    width: 40%;
+
+    @include iphone {
+        width: 100%;
+        display: none;
+    }
+}
+
 .contact {
-	width: 40%;
+    width: 40%;
+
+    li {
+        a {
+            @include iphone {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @include iphone {
+        width: 100%;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
 }
 
 .social-items,
 .footer-logo {
-	float: right;
-	margin: 5px 0;
+    float: right;
+    margin: 5px 0;
+
+    @include iphone {
+        float: none;
+    }
 }
 
 .contact li a {
-	color: #F56C23;
+    color: $color-2;
 }
 
 .fab {
-	margin: 0 5px;
+    margin: 0 5px;
 }
 
 .fa-google-plus-square {
-	color: rgb(234, 107, 33);
+    color: rgb(234, 107, 33);
 }
 
 .fa-twitter-square {
-	color: rgb(62, 187, 255);
+    color: rgb(62, 187, 255);
 }
 
 .fa-facebook-square {
-	color: rgb(26, 55, 184);
+    color: rgb(26, 55, 184);
 }
 
-@media (max-width:767px) {
-	footer {
-		display: block;
-	}
-
-	.about,
-	.contact {
-		width: 100%;
-	}
-	.contact{
-		margin-bottom: 10px;
-		line-height: 1.5;
-	}
-	.contact li a {
-		font-size: 20px;
-	}
-
-	.about {
-		display: none;
-	}
-
-	.footer-logo,
-	.social-items {
-		float: none;
-	}
-
-	.social-icon{
-		font-size: 2.5rem;
-	}
-
+@include iphone {
+    .social-icon {
+        font-size: 2.5rem;
+    }
 }

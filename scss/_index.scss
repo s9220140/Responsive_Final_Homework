@@ -1,14 +1,12 @@
 /* index.html */
 .tips {
-    color: #3D1101;
+    color: $color-1;
 }
 
 .tip-title {
     margin: 2rem auto;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-row-center;
 
     h2 {
         font-size: 20px;
@@ -21,12 +19,12 @@
 .title-line {
     height: 3px;
     width: 20%;
-    border-top: 1px solid #3D1101;
+    border-top: 1px solid $color-1;
 }
 
 .tips {
     padding: 20px;
-    background-image: linear-gradient(to right, #d7d8c7, #e0e2ce, #e9ebd6, #f3f5dd, #fcffe5);
+    background-image: $bg-color-2
 }
 
 .contents {
@@ -44,10 +42,24 @@
     h3 {
         font-size: 18px;
         margin: 16px 0;
+
+        @include pad {
+            font-size: 22px;
+        }
     }
 
     p {
         line-height: 1.5;
+
+        @include pad {
+            font-size: 20px;
+        }
+    }
+
+    @include iphone {
+        width: 90%;
+        margin-bottom: 16px;
+        margin: 16px auto;
     }
 }
 
@@ -55,50 +67,49 @@
     border-radius: 50%;
 }
 
-@media (max-width:768px) {
-    .tips-content {
-        h3 {
-            font-size: 22px;
-        }
-
-        p {
-            font-size: 20px;
-        }
-    }
-
-}
-
-@media (max-width:767px) {
-    .tips-content {
-        width: 90%;
-        margin-bottom: 16px;
-        margin: 16px auto;
-    }
-}
 
 .chef {
     display: flex;
-    background: #3D1101;
-    color: #EFE9E7;
+    background: $color-1;
+    color: $bg-color-1;
+
+    @include pad {
+        display: block;
+    }
 
     img {
         margin-left: 2rem;
+
+        @include pad {
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+        }
     }
 }
 
 
 
 .chef-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 30px;
-    padding-right: 80px;
+    @include flex-column-center;
+    padding: 0 16px;
     line-height: 1.5;
 
-    h3 {
-        font-size: 20px;
+    h3,
+    .subtitle {
+        @include pad {
+            text-align: center;
+            font-size: 22px;
+        }
     }
+
+    p {
+        @include pad {
+            font-size: 20px;
+            padding: 5px;
+        }
+    }
+
 }
 
 
@@ -106,33 +117,11 @@
     margin-bottom: 16px;
 }
 
-@media (max-width:768px) {
-    .chef {
-        display: block;
-        img{
-            display: block;
-            margin: auto;
-            margin-bottom: 10px;
-        }
-    }
-
-    .chef-content{
-        h3,.subtitle{
-            text-align: center;
-            font-size: 22px;
-        }
-        p{
-            font-size: 20px;
-            padding: 5px;
-        }
-    }
-}
-
-
 .comment {
-    color: #3D1101;
+    color: $color-1;
     background-image: linear-gradient(to right, #d7d8c7, #e0e2ce, #e9ebd6, #f3f5dd, #fcffe5);
     padding: 20px;
+
     h2 {
         text-align: center;
         font-size: 24px;
@@ -145,6 +134,10 @@
 .user {
     width: 30%;
     margin: 0 1.5%;
+
+    @include iphone {
+        width: 90%;
+    }
 }
 
 .avatar {
@@ -156,12 +149,20 @@
     margin-top: 25px;
     margin-left: 10px;
     float: left;
+
+    @include pad {
+        font-size: 20px;
+    }
 }
 
 .user-comment {
     float: right;
     margin-left: 75px;
     line-height: 1.5;
+
+    @include pad {
+        font-size: 20px;
+    }
 }
 
 .title {
@@ -169,25 +170,14 @@
     margin-top: 12px;
 }
 
-@media (max-width:768px) {
-    .name,
-    .user-comment {
-        font-size: 20px;
-    }
-}
-
 @media (max-width:767px) {
     .user-section {
         display: block;
     }
-
-    .user {
-        width: 90%;
-    }
 }
 
 .order {
-    color: #3D1101;
+    color: $color-1;
     padding: 20px;
     background: #c6c9cf4e;
 
@@ -202,36 +192,27 @@
 
 .user-form {
     width: 50%;
-}
 
-@media (max-width:768px) {
-    .user-form {
+    @include pad {
         width: 100%;
     }
 }
 
+
 .map {
     margin-right: 16px;
-}
 
-@media (max-width:768px) {
-    .map {
+    @include pad {
         margin: 0;
     }
-
 }
 
-.center {
-    justify-content: center;
+.send-btn {
+    background: $color-2;
 }
 
-.send-button {
-    background: #F56C23;
-}
-
-
-.cancel-button {
-    background: rgba(0, 0, 0, 0.35)
+.cancel-btn {
+    background: $color-3
 }
 
 .group {

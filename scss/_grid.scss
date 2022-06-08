@@ -1,0 +1,12 @@
+@mixin pad {
+    @media (max-width:768px){@content}
+}
+@mixin iphone {
+    @media (max-width:767px){@content}
+}
+@mixin other_device {
+    @media (max-width:768px) and (min-width:568px){@content}
+}
+@mixin iphone_XR{
+    @media (max-width:567px){@content}
+}

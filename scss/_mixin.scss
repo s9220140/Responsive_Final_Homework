@@ -26,17 +26,25 @@
     /* 固定在網頁上 */
     position: absolute;
     z-index: 100;
-    top: 95px;
+    top: 75px;
     left: 0;
     right: 0;
 }
 
-// flex垂直對齊
+// flex水平,垂直對齊
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+@mixin flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 // 背景圖設定
 @mixin bg-img-setting {
