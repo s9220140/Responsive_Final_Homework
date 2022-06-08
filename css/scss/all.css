@@ -340,7 +340,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#d7d8c7), color-stop(#e0e2ce), color-stop(#e9ebd6), color-stop(#f3f5dd), to(#fcffe5));
   background-image: linear-gradient(to right, #d7d8c7, #e0e2ce, #e9ebd6, #f3f5dd, #fcffe5);
   color: #3D1101;
   line-height: 1.2;
@@ -409,4 +408,3 @@ footer h2 {
     font-size: 2.5rem;
   }
 }
-/*# sourceMappingURL=all.css.map */
