@@ -180,7 +180,7 @@ body {
 
 .logo a {
   display: block;
-  background: url(/images/logo_w@svg.svg) no-repeat;
+  background: url(../images/logo_w@svg.svg) no-repeat;
   width: 120px;
   height: 24px;
   text-indent: 101%;
@@ -295,7 +295,7 @@ body {
 }
 
 .banner {
-  background: url(/images/header_desktop.png) no-repeat center;
+  background: url(../images/header_desktop.png) no-repeat center;
   height: 420px;
 }
 
@@ -327,7 +327,7 @@ body {
 
 @media (max-width: 767px) {
   .banner {
-    background: url(/images/header_mobile.png) center/cover;
+    background: url(../images/header_mobile.png) center/cover;
   }
 }
 
