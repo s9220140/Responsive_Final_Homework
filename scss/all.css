@@ -185,7 +185,7 @@ body {
 
 .logo a {
   display: block;
-  background: url(/images/logo_w@svg.svg) no-repeat;
+  background: url(../images/logo_w@svg.svg) no-repeat;
   width: 120px;
   height: 24px;
   text-indent: 101%;
