@@ -6,13 +6,15 @@
 .tip-title {
     margin: 2rem auto;
     text-align: center;
-    @include flex-row-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     h2 {
         font-size: 20px;
-        line-height: 32px;
+        line-height: 1.5;
         font-weight: bold;
-        margin: 0 12px;
+        margin: 0 $size-M;
     }
 }
 
@@ -23,7 +25,7 @@
 }
 
 .tips {
-    padding: 20px;
+    padding: $size-XL;
     background-image: $bg-color-2
 }
 
@@ -40,11 +42,11 @@
     margin: 0 1.5%;
 
     h3 {
-        font-size: 18px;
-        margin: 16px 0;
+        font-size: $font-M;
+        margin: $size-L 0;
 
         @include pad {
-            font-size: 22px;
+            font-size: $font-L;
         }
     }
 
@@ -52,14 +54,14 @@
         line-height: 1.5;
 
         @include pad {
-            font-size: 20px;
+            font-size: $font-L;
         }
     }
 
     @include iphone {
         width: 90%;
-        margin-bottom: 16px;
-        margin: 16px auto;
+        margin-bottom: $size-L;
+        margin: $size-L auto;
     }
 }
 
@@ -83,7 +85,7 @@
         @include pad {
             display: block;
             margin: auto;
-            margin-bottom: 10px;
+            margin-bottom: $size-M;
         }
     }
 }
@@ -91,21 +93,23 @@
 
 
 .chef-content {
-    @include flex-column-center;
-    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 $size-L;
     line-height: 1.5;
 
     h3,
     .subtitle {
         @include pad {
             text-align: center;
-            font-size: 22px;
+            font-size: $font-L;
         }
     }
 
     p {
         @include pad {
-            font-size: 20px;
+            font-size: $font-L;
             padding: 5px;
         }
     }
@@ -114,19 +118,19 @@
 
 
 .subtitle {
-    margin-bottom: 16px;
+    margin-bottom: $size-L;
 }
 
 .comment {
     color: $color-1;
     background-image: linear-gradient(to right, #d7d8c7, #e0e2ce, #e9ebd6, #f3f5dd, #fcffe5);
-    padding: 20px;
+    padding: $size-XL;
 
     h2 {
         text-align: center;
-        font-size: 24px;
+        font-size: $font-L;
         font-weight: bold;
-        margin: 20px 0;
+        margin: $size-XL 0;
     }
 }
 
@@ -147,11 +151,11 @@
 
 .name {
     margin-top: 25px;
-    margin-left: 10px;
+    margin-left: $size-M;
     float: left;
 
     @include pad {
-        font-size: 20px;
+        font-size: $font-L;
     }
 }
 
@@ -161,13 +165,13 @@
     line-height: 1.5;
 
     @include pad {
-        font-size: 20px;
+        font-size: $font-L;
     }
 }
 
 .title {
     text-align: right;
-    margin-top: 12px;
+    margin-top: $size-M;
 }
 
 @media (max-width:767px) {
@@ -178,15 +182,23 @@
 
 .order {
     color: $color-1;
-    padding: 20px;
+    padding: $size-XL;
     background: #c6c9cf4e;
 
     h2 {
         text-align: center;
-        font-size: 24px;
+        font-size: $font-L;
         font-weight: bold;
-        margin: 20px 0;
+        margin: $size-XL 0;
         line-height: 1.5;
+    }
+}
+
+.map {
+    margin-right: $size-L;
+
+    @include pad {
+        margin: 0;
     }
 }
 
@@ -195,15 +207,6 @@
 
     @include pad {
         width: 100%;
-    }
-}
-
-
-.map {
-    margin-right: 16px;
-
-    @include pad {
-        margin: 0;
     }
 }
 

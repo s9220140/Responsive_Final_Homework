@@ -33,93 +33,8 @@ body {
     @include hide-text;
 }
 
-.menu {
-    display: flex;
-
-    @include iphone {
-        @include hide-menu;
-    }
-
-    li {
-        @include iphone {
-            text-align: center;
-            background: #4c1805;
-            border-bottom: 1px solid #FF5E45;
-        }
-
-        a {
-            padding: 18px 12px;
-            color: #fff;
-            display: block;
-
-            @include pad {
-                font-size: 20px;
-            }
-        }
-
-        a:hover {
-            background: red;
-        }
-    }
-}
-
-/*jQ點擊後動態在 body 加上 class */
-@include iphone {
-    .menu-show .menu {
-        max-height: 500px
-    }
-}
-
-
-/* 在PC隱藏漢堡選單 */
-.ham {
-    display: none;
-    cursor: pointer;
-    transition: transform 400ms;
-    user-select: none;
-
-    .top {
-        stroke-dasharray: 40 121;
-    }
-
-    .bottom {
-        stroke-dasharray: 40 121;
-    }
-
-    @include iphone {
-        display: block;
-    }
-}
-
-.ham.active {
-    .top {
-        stroke-dashoffset: -68px;
-    }
-
-    .bottom {
-        stroke-dashoffset: -68px;
-    }
-}
-
-
-.hamRotate.active {
-    transform: rotate(45deg);
-}
-
-.hamRotate180.active {
-    transform: rotate(180deg);
-}
-
-.line {
-    fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #fff;
-    stroke-width: 5.5;
-    stroke-linecap: round;
-}
-
 .banner {
-    background: url(../images/header_desktop.png) no-repeat center;
+    background: url(../images/header_desktop.png);
     min-height: 420px;
 
     @include iphone {
@@ -138,7 +53,7 @@ body {
 
     h2 {
         font-size: 36px;
-        margin: 20px 0;
+        margin: $size-XL 0;
     }
 
     p {
@@ -146,7 +61,7 @@ body {
     }
 
     @include pad {
-        font-size: 22px;
+        font-size: $font-L;
     }
 }
 
@@ -154,7 +69,7 @@ body {
 footer {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: $size-XL;
     background-image: $bg-color-2;
     color: $color-1;
     line-height: 1.2;
@@ -185,7 +100,7 @@ footer {
     li {
         a {
             @include iphone {
-                font-size: 20px;
+                font-size: $size-XL;
             }
         }
     }

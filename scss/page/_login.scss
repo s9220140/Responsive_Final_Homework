@@ -4,15 +4,15 @@
 }
 
 .login-title p {
-    margin: 10px 0;
+    margin: $size-M 0;
 }
 
 .login-form {
     box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.16);
     max-width: 400px;
-    margin: 20px auto;
+    margin: $size-XL auto;
     border-top: 3px solid $color-2;
-    padding: 8px;
+    padding: $size-S;
 
     @include pad {
         width: 100%;
@@ -24,7 +24,7 @@
 
     i {
         position: absolute;
-        padding: 15px;
+        padding: $size-L;
         color: $color-2;
         opacity: 0.5;
     }
@@ -33,16 +33,16 @@
 .form-link {
     display: block;
     color: $color-2;
-    margin-top: 10px;
+    margin-top: $size-M;
 
     @include pad {
-        font-size: 20px;
+        font-size: $font-L;
     }
 }
 
 
 .login-text {
-    font-size: 18px;
+    font-size: $font-M;
     font-weight: bold;
     text-align: center;
 }

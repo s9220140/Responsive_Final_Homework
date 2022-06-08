@@ -4,7 +4,6 @@
 	align-items: center;
     padding-left: 16px;
     padding-right: 16px;
-	// padding: 10px;
 }
 
 // 隱藏文字，h1常用
@@ -29,26 +28,4 @@
     top: 75px;
     left: 0;
     right: 0;
-}
-
-// flex水平,垂直對齊
-@mixin flex-column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-@mixin flex-row-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-// 背景圖設定
-@mixin bg-img-setting {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }

@@ -12,7 +12,7 @@
     width: 20%;
 
     h2 {
-        font-size: 20px;
+        font-size: $font-L;
     }
 
     @include iphone {
@@ -22,95 +22,14 @@
 
 
 .fa-burger {
-    margin-right: 8px;
+    margin-right: $size-S;
 }
-
-.list {
-    margin: 10px 0;
-
-    @include iphone {
-        width: 95%;
-        margin: 1.2rem auto;
-    }
-
-    li {
-        border-bottom: 1px solid $color-1;
-
-        a {
-            color: $color-1;
-            display: block;
-            padding: 8px;
-
-            @include pad {
-                font-size: 20px;
-            }
-
-            @include iphone {
-                font-size: 24px;
-                text-align: center;
-                padding: 12px 0;
-            }
-        }
-
-        a:hover {
-            background: $color-1;
-            color: #fff;
-        }
-    }
-}
-
 
 .cart-contents {
     width: 100%;
     margin-left: 1%;
 }
 
-.search {
-    position: relative;
-    margin-right: 16px;
-    float: left;
-
-    @include iphone {
-        float: none;
-        margin-top: 16px;
-        margin-bottom: 16px;
-    }
-}
-
-.search-bar {
-    border: 2px solid $color-1;
-    background: $bg-color-1;
-    height: 35px;
-    width: 400px;
-    outline: none;
-    font-size: 18px;
-
-    @include iphone {
-        height: 45px;
-        width: 100%;
-    }
-}
-
-.search-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: $color-1;
-    outline: none;
-    cursor: pointer;
-    height: 35px;
-    width: 35px;
-
-    @include iphone {
-        height: 45px;
-        width: 45px;
-    }
-
-    i {
-        color: #fff;
-    }
-
-}
 
 .shop-cart {
     float: left;
@@ -121,12 +40,12 @@
     }
 
     p {
-        padding-right: 10px;
-        margin-top: 8px;
+        padding-right: $size-M;
+        margin-top: $size-S;
         float: left;
 
         @include iphone {
-            font-size: 20px;
+            font-size: $font-L;
         }
     }
 
@@ -172,73 +91,15 @@
     line-height: 20px;
 }
 
-
 .cart-items {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: $size-XL 0;
 }
-
-
-
-.product {
-    font-size: 20px;
-    color: $color-1;
-    width: 31.333%;
-    margin: 0 1%;
-    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
-    margin-bottom: 10px;
-
-    @include other_device {
-        width: 48%;
-    }
-
-    @include iphone_XR {
-        width: 90%;
-        margin-bottom: 16px;
-    }
-}
-
-
-
-.fa-heart {
-    color: #fff;
-    cursor: pointer;
-    padding: 5px;
-    width: 30px;
-}
-
-.product-content {
-    padding: 12px;
-    text-align: center;
-    font-size: 16px;
-
-    @include pad {
-        font-size: 20px;
-    }
-}
-
 
 .food-name {
     height: 50px;
 }
-
-.cart-btn {
-    border: 2px solid $color-2;
-    border-radius: 3px;
-    color: $color-2;
-    background: $bg-color-1;
-    width: 90%;
-    padding: 5px;
-}
-
-.cart-btn:hover {
-    border: 2px solid transparent;
-    color: #fff;
-    background: $color-2;
-}
-
-
 
 .product-1 {
     background: url(../images/product_1.png);
@@ -266,12 +127,12 @@
 .underline {
     border-bottom: 1px solid $color-1;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 16px;
+    margin-top: $size-M;
+    margin-bottom: $size-L;
     width: 50%;
 }
 
 .price {
-    margin-bottom: 10px;
+    margin-bottom: $size-M;
     color: red;
 }

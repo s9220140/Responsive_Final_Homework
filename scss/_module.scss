@@ -1,0 +1,216 @@
+// sidebar list
+.list {
+    margin: $size-M 0;
+
+    @include iphone {
+        width: 95%;
+        margin: 1.2rem auto;
+    }
+
+    li {
+        border-bottom: 1px solid $color-1;
+
+        a {
+            color: $color-1;
+            display: block;
+            padding: $size-S;
+
+            @include pad {
+                font-size: $font-L;
+            }
+
+            @include iphone {
+                font-size: $font-XL;
+                text-align: center;
+                padding: 12px 0;
+            }
+        }
+
+        a:hover {
+            background: $color-1;
+            color: #fff;
+        }
+    }
+}
+
+// search-bar
+.search {
+    position: relative;
+    margin-right: $size-L;
+    float: left;
+
+    @include iphone {
+        float: none;
+        margin-top: $size-L;
+        margin-bottom: $size-L;
+    }
+}
+
+.search-bar {
+    border: 2px solid $color-1;
+    background: $bg-color-1;
+    height: 35px;
+    width: 400px;
+    outline: none;
+    font-size: $font-M;
+
+    @include iphone {
+        height: 45px;
+        width: 100%;
+    }
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $color-1;
+    outline: none;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+
+    @include iphone {
+        height: 45px;
+        width: 45px;
+    }
+
+    i {
+        color: #fff;
+    }
+
+}
+
+// product card
+.product {
+    font-size: $font-L;
+    color: $color-1;
+    width: 31.333%;
+    margin: 0 1%;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: $size-M;
+
+    @include other_device {
+        width: 48%;
+    }
+
+    @include iphone_XR {
+        width: 90%;
+        margin-bottom: $size-L;
+    }
+}
+
+.fa-heart {
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+}
+
+.product-content {
+    padding: 12px;
+    text-align: center;
+    font-size: $font-M;
+
+    @include pad {
+        font-size: $font-M;
+    }
+}
+
+.cart-btn {
+    border: 2px solid $color-2;
+    border-radius: 3px;
+    color: $color-2;
+    background: $bg-color-1;
+    width: 90%;
+    padding: 5px;
+}
+
+.cart-btn:hover {
+    border: 2px solid transparent;
+    color: #fff;
+    background: $color-2;
+}
+
+// navbar menu
+.menu {
+    display: flex;
+
+    @include iphone {
+        @include hide-menu;
+    }
+
+    li {
+        @include iphone {
+            text-align: center;
+            background: #4c1805;
+            border-bottom: 1px solid #FF5E45;
+        }
+
+        a {
+            padding: 18px 12px;
+            color: #fff;
+            display: block;
+
+            @include pad {
+                font-size: $font-L;
+            }
+        }
+
+        a:hover {
+            background: red;
+        }
+    }
+}
+/*jQ點擊後動態在 body 加上 class */
+@include iphone {
+    .menu-show .menu {
+        max-height: 500px
+    }
+}
+
+// hambur menu
+.ham {
+    display: none;
+    cursor: pointer;
+    transition: transform 400ms;
+    user-select: none;
+
+    .top {
+        stroke-dasharray: 40 121;
+    }
+
+    .bottom {
+        stroke-dasharray: 40 121;
+    }
+
+    @include iphone {
+        display: block;
+    }
+}
+
+.ham.active {
+    .top {
+        stroke-dashoffset: -68px;
+    }
+
+    .bottom {
+        stroke-dashoffset: -68px;
+    }
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
