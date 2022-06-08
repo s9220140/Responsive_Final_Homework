@@ -1,0 +1,247 @@
+/* layout */
+body {
+	font-family: sans-serif;
+}
+
+.wrap {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.go-top {
+    display: none;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 52px;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.logo a {
+	display: block;
+	background: url(/images/logo_w@svg.svg) no-repeat;
+	width: 120px;
+	height: 24px;
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.menu {
+    display: flex;
+    li a {
+        padding: 13px;
+        color: #fff;
+        display: block;
+    }
+
+    li a:hover {
+        background: red;
+    }
+}
+
+
+
+
+
+@media (max-width:768px) {
+	.menu li a {
+		font-size: 20px;
+	}
+}
+
+/* 在PC隱藏漢堡選單 */
+.ham {
+	display: none;
+    cursor: pointer;
+	transition: transform 400ms;
+	user-select: none;
+    .top {
+        stroke-dasharray: 40 121;
+    }
+    .bottom {
+        stroke-dasharray: 40 121;
+    }
+}
+
+.ham.active .top {
+	stroke-dashoffset: -68px;
+}
+
+.ham.active .bottom {
+	stroke-dashoffset: -68px;
+}
+
+.hamRotate.active {
+	transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+	transform: rotate(180deg);
+}
+
+.line {
+	fill: none;
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+	stroke: #fff;
+	stroke-width: 5.5;
+	stroke-linecap: round;
+}
+
+@media (max-width:767px) {
+	.menu {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+		/* 隱藏選單 */
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 1s;
+		/* 固定在網頁上 */
+		position: absolute;
+		z-index: 100;
+		top: 95px;
+		left: 0;
+		right: 0;
+	}
+	.menu li {
+		text-align: center;
+		background: #4c1805;
+		border-bottom: 1px solid #FF5E45;
+	}
+
+	.menu li a {
+		font-size: 20px;
+		padding: 1rem;
+	}
+
+	.ham {
+		display: block;
+	}
+
+	/*jQ點擊後動態在 body 加上 class */
+	.menu-show .menu {
+		max-height: 500px
+	}
+}
+
+.banner {
+	background: url(/images/header_desktop.png) no-repeat center;
+	height: 420px;
+}
+
+.slogan {
+	width: 90%;
+	background: rgba(0, 0, 0, 0.35);
+	color: #fff;
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 80px;
+    h2 {
+        font-size: 36px;
+        margin: 20px 0;
+    }
+    p {
+        margin-bottom: 8px;
+    }
+}
+ 
+@media (max-width:768px) {
+	.slogan p,
+	.slogan span {
+		font-size: 20px;
+	}
+
+}
+
+@media (max-width:767px){
+	.banner{
+		background: url(/images/header_mobile.png) center / cover;
+	}
+}
+
+
+/* footer */
+footer {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	background-image: linear-gradient(to right, #d7d8c7, #e0e2ce, #e9ebd6, #f3f5dd, #fcffe5);
+	color: #3D1101;
+	line-height: 1.2;
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+}
+
+.about,
+.contact {
+	width: 40%;
+}
+
+.social-items,
+.footer-logo {
+	float: right;
+	margin: 5px 0;
+}
+
+.contact li a {
+	color: #F56C23;
+}
+
+.fab {
+	margin: 0 5px;
+}
+
+.fa-google-plus-square {
+	color: rgb(234, 107, 33);
+}
+
+.fa-twitter-square {
+	color: rgb(62, 187, 255);
+}
+
+.fa-facebook-square {
+	color: rgb(26, 55, 184);
+}
+
+@media (max-width:767px) {
+	footer {
+		display: block;
+	}
+
+	.about,
+	.contact {
+		width: 100%;
+	}
+	.contact{
+		margin-bottom: 10px;
+		line-height: 1.5;
+	}
+	.contact li a {
+		font-size: 20px;
+	}
+
+	.about {
+		display: none;
+	}
+
+	.footer-logo,
+	.social-items {
+		float: none;
+	}
+
+	.social-icon{
+		font-size: 2.5rem;
+	}
+
+}
